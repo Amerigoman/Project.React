@@ -4,6 +4,8 @@
   "description": "project",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint ./src",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +21,12 @@
   "bugs": {
     "url": "https://github.com/Amerigoman/Project.React/issues"
   },
-  "homepage": "https://github.com/Amerigoman/Project.React#readme"
+  "homepage": "https://github.com/Amerigoman/Project.React#readme",
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.11.1",
+    "webpack": "^1.13.3"
+  }
 }
