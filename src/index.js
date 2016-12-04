@@ -1,10 +1,21 @@
-var str = require('./constant');
-var $ = require('jquery');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-var App = function() {
-	// console.log(str);
-	$('body').html('<h1>' + str + '</h1>');
-};
+class App extends React.Component {
 
-var app = new App();
-app.get = function() {};
+	render() {
+		return (
+			<div>
+				<h1>Application!!!</h1>
+				<p>Now it is working! Yeah!</p>
+			</div>
+
+		);
+	}
+
+}
+
+ReactDOM.render(
+	<App />,
+	document.getElementById('app')
+);
