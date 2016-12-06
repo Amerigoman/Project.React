@@ -1,8 +1,8 @@
 {
-  "name": "test-proj",
+  "name": "react-practice",
   "version": "1.0.0",
-  "description": "test project",
-  "main": "index.js",
+  "description": "",
+  "main": "src/index.js",
   "scripts": {
     "start": "webpack-dev-server --progress --inline --hot",
     "dev": "SET NODE_ENV=development && npm run start",
@@ -10,21 +10,10 @@
     "lint": "eslint ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rainman161/test.git"
-  },
-  "keywords": [
-    "test",
-    "study"
-  ],
-  "author": "Vladilen",
+  "author": "Vladilen Minin",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rainman161/test/issues"
-  },
-  "homepage": "https://github.com/rainman161/test#readme",
   "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
     "babel-core": "^6.13.2",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.4",
@@ -38,13 +27,25 @@
     "eslint-plugin-react": "^6.1.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
     "react-hot-loader": "^1.3.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
+    "lodash": "^4.17.2",
     "react": "^15.3.0",
-    "react-dom": "^15.3.0"
+    "react-dom": "^15.3.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.6.1",
+    "react-router-redux": "^4.0.5",
+    "redux": "^3.5.2",
+    "redux-devtools": "^3.3.1",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-log-monitor": "^1.0.11"
   }
 }

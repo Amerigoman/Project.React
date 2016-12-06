@@ -43,7 +43,6 @@ module.exports = {
         host: 'localhost',
         port: 3000,
         contentBase: __dirname + '/public',
-
         inline: true,
         hot: true,
         historyApiFallback: true
@@ -58,6 +57,13 @@ module.exports = {
                     path.resolve(__dirname, 'src')
                 ],
                 plugins: ['transform-runtime']
+            },
+            {
+                test: /\.less$/,
+                loader: 'style' +
+                '!css?sourceMap' +
+                '!autoprefixer-loader?browsers=last 2 version' +
+                '!less?sourceMap=source-map-less-inline'
             },
             {
                 test: /\.(png|jpg|svg|gif)$/,
@@ -89,12 +95,13 @@ module.exports = {
 
 
 if (NODE_ENV == 'production') {
+    console.log('WTF');
     module.exports.plugins.push(
         new webpack.optimize.UglifyJsPlugin({
             compress: {
-                warnings: false,
-                drop_console: true,
-                unsafe: true
+                warnings:       false,
+                drop_console:   true,
+                unsafe:         true
             }
         })
     );
